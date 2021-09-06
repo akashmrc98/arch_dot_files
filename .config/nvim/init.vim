@@ -88,6 +88,7 @@ call plug#begin('~/.config/nvim/vim-plug/autoload')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'gruvbox-community/gruvbox'
+	Plug 'cakebaker/scss-syntax.vim'
   Plug 'w0rp/ale'    
   Plug 'sheerun/vim-polyglot'
   Plug 'ctrlpvim/ctrlp.vim'
@@ -146,8 +147,8 @@ let g:NERDTreeMinimalMenu = 0
 let g:coc_global_extensions = ['coc-snippets', 'coc-pairs', 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-json']
 
 "" ALE Config
-let g:ale_sign_error = '!'
-let g:ale_sign_warning = '#'
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
 let g:ale_fix_on_save = 1
 
 "" Prettier Config
@@ -167,3 +168,5 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#44475a ctermbg=234 
 
+au BufRead,BufNewFile *.scss set filetype=scss.css
+autocmd FileType scss set iskeyword+=-
