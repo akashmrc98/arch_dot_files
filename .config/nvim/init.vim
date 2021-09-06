@@ -71,6 +71,14 @@ noremap <Leader>z :Goyo<CR>
 noremap <Leader>p :CtrlP<CR>
 noremap <Leader>pb :CtrlPBuffer<CR>
 
+"" Git Fugitive 
+noremap <Leader>gfc :Git commit<CR>
+noremap <Leader>gfl :Git log<CR>
+noremap <Leader>gfb :Git blame<CR>
+noremap <Leader>gfm :Git mergetool<CR>
+noremap <Leader>gfd :Git diff<CR>
+noremap <Leader>gfs :Git status<CR>
+
 "Plugins
 call plug#begin('~/.config/nvim/vim-plug/autoload')
   Plug 'scrooloose/nerdtree'
@@ -146,7 +154,7 @@ let g:ale_fix_on_save = 1
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-""Vim Settings
+"" Vim Settings
 let &t_SI.="\e[6 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)]"]"]"
